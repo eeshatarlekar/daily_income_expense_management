@@ -1,0 +1,14 @@
+{% extends 'sidebar.html' %}
+{% block Content%}
+<form method="POST">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+
+    </table>
+    <td>
+        <tr><input type='submit'></tr>
+        <tr><input type='reset'></tr>
+    </td>
+</form>
+{%endblock%}

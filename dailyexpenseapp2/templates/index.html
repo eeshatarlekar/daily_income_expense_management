@@ -1,0 +1,10 @@
+{% extends 'sidebar.html' %}
+{% block Content%}
+{%if user.is_authenticated%}
+
+<h1 style="text-align: center;">Daily Expense Management Application</h1>
+<h2>Welcome, {{user.first_name}}</h2>
+<h2>Your Balance is {{bal}}</h2>
+
+{%endif%}
+{%  endblock%}

@@ -1,0 +1,30 @@
+{% extends 'sidebar.html' %}
+{% block Content%}
+
+<table border="1">
+    
+    <tr>
+        <th>Expense</th>
+        <th>Expense Type</th>
+   
+        <th>Description</th>
+        <th>User</th>
+        <th colspan="2">Action</th>
+
+
+    </tr>
+    {% for i in f%}
+    <tr>
+        <td>{{i.expense}}</td>
+        <td>{{i.expenseType}}</td>
+        <td>{{i.description}}</td>
+        <td>{{i.user}}</td>
+        <td><a href="{% url 'expm:deleteexp' i.id %}">Delete</a></td>
+        <td><a href="{% url 'expm:deleteexp' i.id %}">Edit</a></td>
+
+
+
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
